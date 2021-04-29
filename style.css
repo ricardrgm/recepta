@@ -35,11 +35,14 @@ li{
     font-size:large;
 }
 
-ul > li{
+li{
     list-style-type: none
     
 }
+
 ul > li:before{content: "-"}
+ol > li:before{content: counter(section, decimal) ") ";}
+ol > li { counter-increment: section;} 
 
 hr {
     size:"8px";
