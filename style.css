@@ -40,9 +40,16 @@ li{
     
 }
 
-ul > li:before{content: "-"}
-ol > li:before{content: counter(section, decimal) ") ";}
-ol > li { counter-increment: section;} 
+ul > li::before{
+    content: "-"
+}
+
+ol > li::before{
+    content: counter(section, decimal) ") "; 
+}
+ol > li {
+     counter-increment: section;
+}
 
 hr {
     size:"8px";
